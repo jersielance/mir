@@ -1,0 +1,8 @@
+h1 Панель управления
+= link_to 'Выйти', logout_path, method: :post
+
+= form_for :picture, url: pictures_path, html: { multipart: true } do |f|
+  = f.fields_for :picture do |p|
+    = p.file_field :picture, multiple: true, name: 'picture[picture][]'
+    = p.hidden_field :picture_cache, multiple: true, name: 'picture[picture][]'
+  = f.submit
