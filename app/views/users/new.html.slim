@@ -1,8 +1,12 @@
-= form_for @user do |f|
-  = f.email_field :email
-  br
-  = f.password_field :password
-  br
-  = f.password_field :password_confirmation
-  br
-  = f.submit 'Зарегистрироваться'
+.container
+  .row(style="width: 100" )
+    .col.m6.offset-m3
+      h3 Регистрация
+      = form_for @user do |f|
+        = f.email_field :email, placeholder: 'Введите email'
+        br
+        = f.password_field :password, placeholder: 'Введите Пароль'
+        br
+        = f.password_field :password_confirmation, placeholder: 'Введите пароль еще раз'
+        br
+        = f.button 'Зарегистрироваться', type: 'submit', class: 'waves-effect waves-light btn'
