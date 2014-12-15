@@ -1,6 +1,10 @@
-= form_tag user_sessions_path, method: :post do
-  = text_field_tag :email
-  br
-  = password_field_tag :password
-  br
-  = submit_tag 'Войти'
+.container
+  .row
+    .col.m6.offset-m3
+      h3 Вход
+      = form_tag user_sessions_path, method: :post do
+        = text_field_tag :email
+        br
+        = password_field_tag :password
+        br
+        = button_tag 'Войти', type: 'submit', class: 'waves-effect waves-light btn'
