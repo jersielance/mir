@@ -5,24 +5,26 @@ head
   = stylesheet_link_tag    'application'
   = javascript_include_tag 'application'
   = csrf_meta_tags
+
+
 body
-  nav
+  nav.top-menu
     .nav-wrapper
       a href="#" class="brand-logo" МИР
       ul#nav-mobile.right.side-nav
         li
-          = link_to 'Главная', root_path
+          = link_to 'Главная', root_path, class: 'waves-effect waves-light'
         li
-          = link_to 'Услуги', services_path
+          = link_to 'Услуги', services_path, class: 'waves-effect waves-light'
         li
-          = link_to 'Портфолио', pictures_path
+          = link_to 'Портфолио', pictures_path, class: 'waves-effect waves-light'
         li
-          = link_to 'Контакты', contacts_path
+          = link_to 'Контакты', contacts_path, class: 'waves-effect waves-light'
         - if current_user
           li
-            = link_to 'Панель управления', users_path
+            = link_to 'Панель управления', users_path, class: 'waves-effect waves-light'
           li
-            = link_to 'Выйти', logout_path, method: :post
+            = link_to 'Выйти', logout_path, method: :post, class: 'waves-effect waves-light'
       a(class="button-collapse" href="#" data-activates="nav-mobile")
         i class="mdi-navigation-menu"
 
@@ -30,6 +32,3 @@ body
   = flash[:alert]
 
   = yield
-
-script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"
-script type="text/javascript" src="js/materialize.min.js"

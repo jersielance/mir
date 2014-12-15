@@ -5,7 +5,13 @@
   box-sizing: border-box;
 }
 
+$top-menu-background: #3C9CC6;
+
 body {
   background: url("tiny_grid_@2X.png") repeat;
   font-family: Roboto;
+}
+
+.top-menu {
+  background: $top-menu-background;
 }
