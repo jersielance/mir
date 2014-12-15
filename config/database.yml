@@ -81,7 +81,7 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  adapter: postgresql
+  adapter: postgres
   encoding: unicode
   database: ilya_production
   username: krami.dev
