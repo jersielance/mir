@@ -81,7 +81,8 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
   database: ilya_production
-  username: ilya
-  password: <%= ENV['ILYA_DATABASE_PASSWORD'] %>
+  username: krami.dev
+  password: Z9rTtL1wY8Z28z9IK--15ytyXQ
